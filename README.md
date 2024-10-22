@@ -11,7 +11,7 @@ A CSV file containing columns: prefix, uid1, and uid2.
 A working directory path to save the downloaded PDB files and results.
 
 ## Output:
-A CSV file containing the following columns inaddition to the columns in the input file:
+A CSV file named <youinputname_TMscore.csv> containing the following columns inaddition to the columns in the input file:
 - Rg1: Radius of gyration of protein 1.
 - Rg2: Radius of gyration of protein 2.
 - RMSD: Root Mean Square Deviation from the TM-align output.
