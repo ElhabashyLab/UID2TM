@@ -107,8 +107,8 @@ for index, row in df.iterrows():
         print(f"Error aligning {uid1} and {uid2}: {e}")
         continue
 
-# Save the updated DataFrame to a new CSV file with "_tmscore" appended to the original filename
-output_csv_path = os.path.join(work_dir, os.path.basename(csv_path).replace('.csv', '_tmscore.csv'))
+# Save the updated DataFrame to a new CSV file with "_TMscore" appended to the original filename
+output_csv_path = os.path.join(work_dir, os.path.basename(csv_path).replace('.csv', '_TMscore.csv'))
 df.to_csv(output_csv_path, index=False)
 
 print(f"Results saved to {output_csv_path}")
