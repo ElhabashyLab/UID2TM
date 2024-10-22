@@ -32,6 +32,7 @@ Find where TM-align is installed on your system and make sure the executable is 
 
 Add the following line to the file, replacing /path/to/tmalign with the actual path to the directory containing the TM-align executable:
 > export PATH="$PATH:/path/to/tmalign"
+
 Save the file and exit the editor
 
 Reload the shell configuration
