@@ -7,7 +7,7 @@ import subprocess
 csv_path = input("Enter the path to the CSV file (containing prefix, uid1, uid2): ")
 work_dir = input("Enter the path to the working directory where results will be saved: ")
 
-# Load CSV
+# Load CSV input
 df = pd.read_csv(csv_path)
 df['Rg1'] = np.nan
 df['Rg2'] = np.nan
@@ -19,11 +19,11 @@ if not os.path.exists(work_dir):
     os.makedirs(work_dir)
 
 # AlphaFold base URL for downloading PDB files
-alphafold_url_template = "https://alphafold.ebi.ac.uk/files/AF-{}-F1-model_v1.pdb"
+alphafold_url = "https://alphafold.ebi.ac.uk/files/AF-{}-F1-model_v1.pdb"
 
 # Function to fetch protein structure
 def fetch_protein_structure(uniprot_id, output_path):
-    url = alphafold_url_template.format(uniprot_id)
+    url = alphafold_url.format(uniprot_id)
     response = requests.get(url)
     if response.status_code == 200:
         with open(output_path, 'wb') as f:
@@ -95,7 +95,7 @@ for index, row in df.iterrows():
         print(f"Error calculating radius of gyration for {uid1} or {uid2}: {e}")
         continue
 
-    # Perform the alignment using TM-align and calculate TM-score and RMSD
+    # Alignment protein structurs and calculate TM-score and RMSD
     try:
         aligned_pdb_file = align_with_tmalign(pdb1_path, pdb2_path, aligned_pdb_path)
         aligned_length, rmsd, tm_score = parse_tmalign_output(aligned_pdb_file)
