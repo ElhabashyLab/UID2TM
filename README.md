@@ -2,7 +2,7 @@
 This Python script automates the process of comparing protein structures by downloading their PDB files from the AlphaFold protein structure database, computing their radius of gyration (Rg), aligning the structures using TM-align, and extracting key metrics like RMSD, TM-score, and aligned length. The results are saved in a CSV file for each protein pair provided in the input CSV.
 
 ## How to run the script:
-python3 uid2TM.py
+> python3 uid2TM.py
 
 ## Input:
 A CSV file containing columns: prefix, uid1, and uid2.
