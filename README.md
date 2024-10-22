@@ -1,7 +1,7 @@
 # uid2TM
 This Python script automates the process of comparing protein structures by downloading their PDB files from the AlphaFold protein structure database, computing their radius of gyration (Rg), aligning the structures using TM-align, and extracting key metrics like RMSD, TM-score, and aligned length. The results are saved in a CSV file for each protein pair provided in the input CSV.
 
-# How to run the script:
+## How to run the script:
 python3 uid2TM.py
 
 ## Input:
@@ -19,9 +19,25 @@ A CSV file containing the following columns inaddition to the columns in the inp
 - Aligned Length: Number of aligned residues between the two proteins.
 
 ## Library Requirements:
-BioPython:
+-TMalign
+the script uses TMalign which is a python module that provides wrappers to TMalign, TMscore and MMalign.
+The executables can be downloaded from http://zhanglab.ccmb.med.umich.edu/TM-align/ and should be saved to any directory in PATH. 
+Also see https://pymolwiki.org/index.php/TMalign
+Install TM-align as follows:
+> conda install -c speleo3 tmalign
+Find where TM-align is installed on your system and make sure the TMalign executable is available in your PATH in you bashrc file:
+> vi ~/.bashrc
+Add the following line to the file, replacing /path/to/tmalign with the actual path to the directory containing the TM-align executable:
+> export PATH="$PATH:/path/to/tmalign"
+Save the file and exit the editor
+Reload the shell configuration
+> source ~/.bashrc
+Verify the installtion as follows
+> tmalign -h
+
+-BioPython:
 > pip3 install biopython
-Pandas:
+-Pandas:
 > pip3 install pandas
-Requests:
+-Requests:
 > pip3 install requests
