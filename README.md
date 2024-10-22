@@ -20,18 +20,23 @@ A CSV file containing the following columns inaddition to the columns in the inp
 
 ## Library Requirements:
 -TMalign
-the script uses TMalign which is a python module that provides wrappers to TMalign, TMscore and MMalign.
+The uid2TM.py script uses TMalign which is a python module that provides wrappers to TMalign, TMscore and MMalign.
 The executables can be downloaded from http://zhanglab.ccmb.med.umich.edu/TM-align/ and should be saved to any directory in PATH. 
 Also see https://pymolwiki.org/index.php/TMalign
+
 Install TM-align as follows:
 > conda install -c speleo3 tmalign
+
 Find where TM-align is installed on your system and make sure the TMalign executable is available in your PATH in you bashrc file:
 > vi ~/.bashrc
+
 Add the following line to the file, replacing /path/to/tmalign with the actual path to the directory containing the TM-align executable:
 > export PATH="$PATH:/path/to/tmalign"
 Save the file and exit the editor
+
 Reload the shell configuration
 > source ~/.bashrc
+
 Verify the installtion as follows
 > tmalign -h
 
