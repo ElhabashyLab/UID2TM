@@ -18,7 +18,7 @@ A CSV file named <youinputname_TMscore.csv> containing the following columns ina
 - TM-Score: TM-align score for protein alignment.
 - Aligned Length: Number of aligned residues between the two proteins.
 
-## Library Requirements:
+## Requirements:
 -TMalign
 The uid2TM.py script uses TMalign which is a python module that provides wrappers to TMalign, TMscore and MMalign.
 The executables can be downloaded from http://zhanglab.ccmb.med.umich.edu/TM-align/ and should be saved to any directory in PATH. 
