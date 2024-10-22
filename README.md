@@ -37,7 +37,9 @@ Verify the installtion as follows
 
 -BioPython:
 > pip3 install biopython
+
 -Pandas:
 > pip3 install pandas
+
 -Requests:
 > pip3 install requests
