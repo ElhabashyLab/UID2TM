@@ -27,7 +27,7 @@ Also see https://pymolwiki.org/index.php/TMalign
 Install TM-align as follows:
 > conda install -c speleo3 tmalign
 
-Find where TM-align is installed on your system and make sure the TMalign executable is available in your PATH in you bashrc file:
+Find where TM-align is installed on your system and make sure the executable is available in your PATH in the bashrc file:
 > vi ~/.bashrc
 
 Add the following line to the file, replacing /path/to/tmalign with the actual path to the directory containing the TM-align executable:
