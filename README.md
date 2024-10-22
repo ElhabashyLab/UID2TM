@@ -38,7 +38,7 @@ Reload the shell configuration
 > source ~/.bashrc
 
 Verify the installtion as follows
-> tmalign -h
+> TMalign -h
 
 -BioPython:
 > pip3 install biopython
