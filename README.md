@@ -30,8 +30,8 @@ Install TM-align as follows:
 Find where TM-align is installed on your system and make sure the executable is available in your PATH in the bashrc file:
 > vi ~/.bashrc
 
-Add the following line to the file, replacing /path/to/tmalign with the actual path to the directory containing the TM-align executable:
-> export PATH="$PATH:/path/to/tmalign"
+Add the following line to the file, replacing /path/to/tmalign with the actual path to the TM-align executable:
+> export PATH="$PATH:/path/to/TMalign"
 
 Save the file and exit the editor
 
