@@ -1,5 +1,18 @@
 # uid2TM
-This Python script automates the process of comparing protein structures by downloading their PDB files from the AlphaFold protein structure database, computing their radius of gyration (Rg), aligning the structures using TM-align, and extracting key metrics like RMSD, TM-score, and aligned length. The results are saved in a CSV file for each protein pair provided in the input CSV.
+This Python script automates the process of comparing protein structures by downloading their PDB files from the AlphaFold protein structure database, computing their radius of gyration (Rg), aligning the structures using TM-align, and extracting key metrics like RMSD, TM-score, and aligned length. The results are saved in a CSV file for each protein pair provided in the input CSV. Based on statistics:
+>0.0 < TM-score < 0.30, random structural similarity              
+>0.5 < TM-score < 1.00, in about the same fold                   
+ 
+ **************************************************************************
+ *                        TM-align (Version 20190822)                     *
+ * An algorithm for protein structure alignment and comparison            *
+ * Based on statistics:                                                   *
+ *       0.0 < TM-score < 0.30, random structural similarity              *
+ *       0.5 < TM-score < 1.00, in about the same fold                    *
+ * Reference: Y Zhang and J Skolnick, Nucl Acids Res 33, 2302-9 (2005)    *
+ * Please email your comments and suggestions to: zhng@umich.edu          *
+ **************************************************************************
+
 
 ## How to run the script:
 > python3 uid2TM.py
@@ -21,18 +34,16 @@ A CSV file named <youinputname_TMscore.csv> containing the following columns ina
 ## Requirements:
 -TMalign
 The uid2TM.py script uses TMalign which is a python module that provides wrappers to TMalign, TMscore and MMalign.
-The executables can be downloaded from http://zhanglab.ccmb.med.umich.edu/TM-align/ and should be saved to any directory in PATH. 
-Also see https://pymolwiki.org/index.php/TMalign
-
+The executables can be downloaded from http://zhanglab.ccmb.med.umich.edu/TM-align/ and should be saved to any directory in PATH. Also see https://pymolwiki.org/index.php/TMalign
+Click [here](https://zhanggroup.org/TM-align/TMalign.cpp) to downlowd TMalign 
 Install TM-align as follows:
-> conda install -c speleo3 tmalign
+> g++ -static -O3 -ffast-math -lm -o TMalign TMalign.cpp 
 
 Find where TM-align is installed on your system and make sure the executable is available in your PATH in the bashrc file:
 > vi ~/.bashrc
 
-Add the following line to the file, replacing /path/to/tmalign with the actual path to the TM-align executable:
-> export PATH="$PATH:/path/to/TMalign"
-
+Add the following line to the file, replacing /path/to/TMalign with the actual path to the TM-align executable
+> export TMalign="/path/to/TMalign"
 Save the file and exit the editor
 
 Reload the shell configuration
@@ -52,3 +63,6 @@ Verify the installtion as follows
 
 -Numpy
 > pip3 install numpy
+
+MDAnalysis
+>pip3 install MDAnalysis --only-binary :all:
