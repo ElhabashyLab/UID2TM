@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import requests
 import subprocess
+import numpy as np
 
 # Ask user for input CSV file path and working directory
 csv_path = input("Enter the path to the CSV file (containing prefix, uid1, uid2): ")
