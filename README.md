@@ -49,3 +49,6 @@ Verify the installtion as follows
 
 -Requests:
 > pip3 install requests
+
+-Numpy
+> pip3 install numpy
