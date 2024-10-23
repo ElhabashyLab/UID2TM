@@ -1,7 +1,7 @@
 # uid2TM
 This Python script automates the process of comparing protein structures by downloading their PDB files from the AlphaFold protein structure database, computing their radius of gyration (Rg), aligning the structures using TM-align, and extracting key metrics like RMSD, TM-score, and aligned length. The results are saved in a CSV file for each protein pair provided in the input CSV. Based on statistics:
->0.0 < TM-score < 0.30, random structural similarity              
->0.5 < TM-score < 1.00, in about the same fold                   
+- 0.0 < TM-score < 0.30, random structural similarity              
+- 0.5 < TM-score < 1.00, in about the same fold                   
 
 ## How to run the script:
 > python3 uid2TM.py
