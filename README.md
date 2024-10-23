@@ -23,7 +23,9 @@ A CSV file named <youinputname_TMscore.csv> containing the following columns ina
 ## Requirements:
 -TMalign
 The uid2TM.py script uses TMalign which is a python module that provides wrappers to TMalign, TMscore and MMalign.
-The executables can be downloaded from http://zhanglab.ccmb.med.umich.edu/TM-align/ and should be saved to any directory in PATH. Also see https://pymolwiki.org/index.php/TMalign
+The executables can be downloaded from http://zhanglab.ccmb.med.umich.edu/TM-align/ and should be saved to any directory in PATH. 
+Also see https://pymolwiki.org/index.php/TMalign
+
 Click [here](https://zhanggroup.org/TM-align/TMalign.cpp) to downlowd TMalign 
 Install TM-align as follows:
 > g++ -static -O3 -ffast-math -lm -o TMalign TMalign.cpp 
@@ -33,6 +35,7 @@ Find where TM-align is installed on your system and make sure the executable is 
 
 Add the following line to the file, replacing /path/to/TMalign with the actual path to the TM-align executable
 > export TMalign="/path/to/TMalign"
+
 Save the file and exit the editor
 
 Reload the shell configuration
