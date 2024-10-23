@@ -2,17 +2,6 @@
 This Python script automates the process of comparing protein structures by downloading their PDB files from the AlphaFold protein structure database, computing their radius of gyration (Rg), aligning the structures using TM-align, and extracting key metrics like RMSD, TM-score, and aligned length. The results are saved in a CSV file for each protein pair provided in the input CSV. Based on statistics:
 >0.0 < TM-score < 0.30, random structural similarity              
 >0.5 < TM-score < 1.00, in about the same fold                   
- 
- **************************************************************************
- *                        TM-align (Version 20190822)                     *
- * An algorithm for protein structure alignment and comparison            *
- * Based on statistics:                                                   *
- *       0.0 < TM-score < 0.30, random structural similarity              *
- *       0.5 < TM-score < 1.00, in about the same fold                    *
- * Reference: Y Zhang and J Skolnick, Nucl Acids Res 33, 2302-9 (2005)    *
- * Please email your comments and suggestions to: zhng@umich.edu          *
- **************************************************************************
-
 
 ## How to run the script:
 > python3 uid2TM.py
