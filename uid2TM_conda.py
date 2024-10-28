@@ -54,7 +54,7 @@ def calculate_radius_of_gyration(pdb_path):
 # Function to align structures using TM-align and return RMSD and TM-score
 def align_with_tmalign(pdb1_path, pdb2_path, aligned_pdb_path):
     # Run TM-align using subprocess and get the output
-    cmd = f"/home/hadeer/TMalign {pdb1_path} {pdb2_path} -o {aligned_pdb_path} > ./TMalign.log"
+    cmd = f"TMalign {pdb1_path} {pdb2_path} -o {aligned_pdb_path}"
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     
     if result.returncode != 0:
