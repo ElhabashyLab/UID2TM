@@ -61,7 +61,7 @@ Save and exit the editor, then reload the shell configuration:
 Confirm the installation:
 > TMalign -h
 
-Additional Python Packages
+### Additional Python Packages
 Install these packages (BioPython, Pandas, Requests, Numpy) with pip3:
 >pip3 install biopython pandas requests numpy
 
