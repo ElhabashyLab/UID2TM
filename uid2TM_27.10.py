@@ -59,7 +59,7 @@ def align_with_tmalign(pdb1_path, pdb2_path, output_dir):
     # Path to TMalign.out file
     tmalign_output_path = os.path.join(output_dir, "TMalign.out")
     # Run TM-align with output redirected to TMalign.out
-    cmd = f"/media/hadeer/Elements/seq2TM/TMalign {pdb1_path} {pdb2_path} > {tmalign_output_path}"
+    cmd = f"$TMalign {pdb1_path} {pdb2_path} > {tmalign_output_path}"
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     
     if result.returncode != 0:
