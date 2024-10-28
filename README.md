@@ -38,7 +38,7 @@ Download and compile TM-align from the Zhang Lab site. Click [here](https://zhan
 
 Ensure TM-align is in your PATH by adding the following to ~/.bashrc, 
 replacing /path/to/TMalign with the actual path:
-> export PATH="$PATH:/path/to/TMalign"
+> export TMalign="/path/to/TMalign"
 
 Save and exit the editor, then reload the shell configuration:
 > source ~/.bashrc
@@ -51,6 +51,7 @@ Install TM-align via Conda following these instructions :
 > conda install -c schrodinger pymol
 > conda install -c schrodinger pymol-psico
 > conda install -c speleo3 tmalign
+
 After installation, add the path to TM-align to your PATH. 
 Replace /path/to/tmalign with the actual directory containing the TM-align executable:
 > export PATH="$PATH:/path/to/tmalign"
