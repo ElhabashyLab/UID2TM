@@ -30,49 +30,36 @@ A CSV file named <youinputname_TMscore.csv> containing the following columns ina
 - Aligned Length: Number of aligned residues between the two proteins.
 
 ## Requirements:
-- For the uid2TM.py script, one should install TMalign which is a python module that provides wrappers to TMalign, TMscore and MMalign.
-The executables can be downloaded from http://zhanglab.ccmb.med.umich.edu/TM-align/ and should be saved to any directory in PATH. 
-Click [here](https://zhanggroup.org/TM-align/TMalign.cpp) to downlowd TMalign 
-Install TM-align as follows:
-> g++ -static -O3 -ffast-math -lm -o TMalign TMalign.cpp 
 
-Find where TM-align is installed on your system and make sure the executable is available in your PATH in the bashrc file:
-> vi ~/.bashrc
-
-Add the following line to the file, replacing /path/to/TMalign with the actual path to the TM-align executable
-> export TMalign="/path/to/TMalign"
-
-Save the file and exit the editor
-
-Reload the shell configuration
+### TM-align Installation
+#### For the uid2TM.py script
+Download and compile TM-align from the Zhang Lab site. Click [here](https://zhanggroup.org/TM-align/TMalign.cpp). 
+> g++ -static -O3 -ffast-math -lm -o TMalign TMalign.cpp
+Ensure TM-align is in your PATH by adding the following to ~/.bashrc, 
+replacing /path/to/TMalign with the actual path:
+> export PATH="$PATH:/path/to/TMalign"
+Save and exit the editor, then reload the shell configuration:
 > source ~/.bashrc
-
-Verify the installtion as follows
+Confirm the installation:
 > TMalign -h
 
-- For the uid2TM_conda.py script, we install TMalgin folowing instruction here https://pymolwiki.org/index.php/TMalign
-
+#### For uid2TM_conda.py script
+Install TM-align via Conda following these instructions :
 > conda install -c schrodinger pymol
 > conda install -c schrodinger pymol-psico
 > conda install -c speleo3 tmalign
-
-Add the following line to the file, replacing /path/to/TMalign with the actual path to the TM-align executable
-> export TMalign="/path/to/TMalign"
-
-Save the file and exit the editor
-
-Reload the shell configuration
+After installation, add the path to TM-align to your PATH. 
+Replace /path/to/tmalign with the actual directory containing the TM-align executable:
+> export PATH="$PATH:/path/to/tmalign"
+Save and exit the editor, then reload the shell configuration:
 > source ~/.bashrc
 
-Verify the installtion as follows
+Confirm the installation:
 > TMalign -h
 
-
-
-- BioPython: > pip3 install biopython
-- Pandas: > pip3 install pandas
-- Requests: > pip3 install requests
-- Numpy > pip3 install numpy
+Additional Python Packages
+Install these packages (BioPython, Pandas, Requests, Numpy) with pip3:
+>pip3 install biopython pandas requests numpy
 
 MDAnalysis
 >pip3 install MDAnalysis --only-binary :all:
