@@ -35,11 +35,14 @@ A CSV file named <youinputname_TMscore.csv> containing the following columns ina
 #### For the uid2TM.py script
 Download and compile TM-align from the Zhang Lab site. Click [here](https://zhanggroup.org/TM-align/TMalign.cpp). 
 > g++ -static -O3 -ffast-math -lm -o TMalign TMalign.cpp
+
 Ensure TM-align is in your PATH by adding the following to ~/.bashrc, 
 replacing /path/to/TMalign with the actual path:
 > export PATH="$PATH:/path/to/TMalign"
+
 Save and exit the editor, then reload the shell configuration:
 > source ~/.bashrc
+
 Confirm the installation:
 > TMalign -h
 
@@ -51,6 +54,7 @@ Install TM-align via Conda following these instructions :
 After installation, add the path to TM-align to your PATH. 
 Replace /path/to/tmalign with the actual directory containing the TM-align executable:
 > export PATH="$PATH:/path/to/tmalign"
+
 Save and exit the editor, then reload the shell configuration:
 > source ~/.bashrc
 
