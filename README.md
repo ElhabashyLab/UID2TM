@@ -64,7 +64,7 @@ Confirm the installation:
 
 ### Additional Python Packages
 Install these packages (BioPython, Pandas, Requests, Numpy) with pip3:
->pip3 install biopython pandas requests numpy
+>pip3 install biopython pandas requests numpy tqdm
 
 MDAnalysis
 >pip3 install MDAnalysis --only-binary :all:
