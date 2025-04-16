@@ -4,6 +4,7 @@ import requests
 import subprocess
 import numpy as np
 from Bio.PDB import PDBParser
+from tqdm import tqdm  #add progress bar 
 
 # Ask user for input CSV file path and working directory
 csv_path = input("Enter the path to the CSV file (containing prefix, uid1, uid2): ")
@@ -95,7 +96,8 @@ def parse_tmalign_output(tmalign_output_path):
 
 
 # Iterate through each row in the DataFrame
-for index, row in df.iterrows():
+for index, row in tqdm(df.iterrows(), total=len(df), desc="Processing protein pairs"):
+#for index, row in df.iterrows():
     prefix = row['prefix']
     uid1 = row['uid1']
     uid2 = row['uid2']
