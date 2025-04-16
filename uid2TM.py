@@ -25,7 +25,7 @@ if not os.path.exists(work_dir):
     os.makedirs(work_dir)
 
 # AlphaFold base URL for downloading PDB files
-alphafold_url = "https://alphafold.ebi.ac.uk/files/AF-{}-F1-model_v1.pdb"
+alphafold_url = "https://alphafold.ebi.ac.uk/files/AF-{}-F1-model_v4.pdb"
 
 # Function to fetch protein structure
 def fetch_protein_structure(uniprot_id, output_path):
